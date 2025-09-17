@@ -24,7 +24,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApplyNew, onContinue
           <div className="space-y-4 mb-8">
             <button
               onClick={onApplyNew}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-6 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              className="w-full bg-black text-white py-4 px-6 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
             >
               <CreditCard className="h-5 w-5" />
               <span>Apply for Loan</span>
@@ -32,7 +32,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApplyNew, onContinue
             
             <button
               onClick={onContinueApplication}
-              className="w-full bg-white border-2 border-green-500 text-green-600 py-4 px-6 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all duration-300 flex items-center justify-center space-x-2"
+              className="w-full bg-white border-2 border-black text-black py-4 px-6 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <RefreshCw className="h-5 w-5" />
               <span>Continue My Application</span>
@@ -50,42 +50,42 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onApplyNew, onContinue
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="h-6 w-6 text-green-600" />
+              <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="h-6 w-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Instant Approval</h3>
+              <h3 className="text-lg font-semibold text-black mb-2">Instant Approval</h3>
               <p className="text-gray-600 text-sm">Get loan approval in minutes with our automated eligibility system</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-blue-600" />
+              <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Multiple Lenders</h3>
+              <h3 className="text-lg font-semibold text-black mb-2">Multiple Lenders</h3>
               <p className="text-gray-600 text-sm">Compare offers from top banks and NBFCs to get the best deal</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-purple-600" />
+              <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Secure Process</h3>
+              <h3 className="text-lg font-semibold text-black mb-2">Secure Process</h3>
               <p className="text-gray-600 text-sm">Bank-grade security with encrypted data transmission</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Clock className="h-6 w-6 text-orange-600" />
+              <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <Clock className="h-6 w-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Quick Disbursal</h3>
+              <h3 className="text-lg font-semibold text-black mb-2">Quick Disbursal</h3>
               <p className="text-gray-600 text-sm">Fast loan disbursal directly to dealer account</p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 md:col-span-2 lg:col-span-2">
-              <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <CreditCard className="h-6 w-6 text-green-600" />
+              <div className="bg-gray-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <CreditCard className="h-6 w-6 text-black" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Competitive Rates</h3>
+              <h3 className="text-lg font-semibold text-black mb-2">Competitive Rates</h3>
               <p className="text-gray-600 text-sm">Starting from 8.5% per annum with flexible tenure options up to 5 years</p>
             </div>
           </div>

@@ -91,10 +91,10 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
 
         <div className="bg-white rounded-xl shadow-lg p-6">
           <div className="text-center mb-6">
-            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Smartphone className="h-8 w-8 text-green-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Smartphone className="h-8 w-8 text-black" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">
+            <h2 className="text-2xl font-bold text-black mb-2">
               {isReturningCustomer ? 'Welcome Back!' : 'Let\'s Get Started'}
             </h2>
             <p className="text-gray-600">
@@ -114,7 +114,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all"
                 placeholder="Enter your full name"
               />
             </div>
@@ -127,7 +127,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
                 type="tel"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all"
                 placeholder="Enter 10-digit mobile number"
                 maxLength={10}
               />
@@ -136,7 +136,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
             <button
               onClick={handleSendOTP}
               disabled={!fullName.trim() || mobileNumber.length !== 10}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               Send OTP
             </button>
@@ -150,7 +150,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
     <div className="max-w-md mx-auto">
       <button
         onClick={() => setStep('details')}
-        className="flex items-center text-green-600 hover:text-green-700 mb-6 transition-colors"
+        className="flex items-center text-black hover:text-gray-700 mb-6 transition-colors"
       >
         <ChevronLeft className="h-5 w-5 mr-1" />
         Back
@@ -158,10 +158,10 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
 
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="text-center mb-6">
-          <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Smartphone className="h-8 w-8 text-green-600" />
+          <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Smartphone className="h-8 w-8 text-black" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Verify OTP</h2>
+          <h2 className="text-2xl font-bold text-black mb-2">Verify OTP</h2>
           <p className="text-gray-600">
             Enter the 6-digit code sent to<br />
             <span className="font-semibold">+91 {mobileNumber}</span>
@@ -178,7 +178,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
                 value={digit}
                 onChange={(e) => handleOtpChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
-                className="w-12 h-12 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all"
+                className="w-12 h-12 text-center text-xl font-bold border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-black transition-all"
                 maxLength={1}
               />
             ))}
@@ -190,7 +190,7 @@ export const OTPVerification: React.FC<OTPVerificationProps> = ({
             ) : (
               <button
                 onClick={handleResendOTP}
-                className="text-sm text-green-600 hover:text-green-700 font-medium flex items-center justify-center space-x-1"
+                className="text-sm text-black hover:text-gray-700 font-medium flex items-center justify-center space-x-1"
               >
                 <RefreshCw className="h-4 w-4" />
                 <span>Resend OTP</span>

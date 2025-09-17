@@ -106,7 +106,7 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
     <div className="max-w-2xl mx-auto">
       <button
         onClick={onBack}
-        className="flex items-center text-green-600 hover:text-green-700 mb-6 transition-colors"
+        className="flex items-center text-black hover:text-gray-700 mb-6 transition-colors"
       >
         <ChevronLeft className="h-5 w-5 mr-1" />
         Back
@@ -114,17 +114,17 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
 
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="text-center mb-8">
-          <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <Camera className="h-8 w-8 text-orange-600" />
+          <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Camera className="h-8 w-8 text-black" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Document Verification</h2>
+          <h2 className="text-2xl font-bold text-black mb-2">Document Verification</h2>
           <p className="text-gray-600">Upload your documents for quick verification</p>
         </div>
 
         {/* Extracted Data Display */}
         {extractedData.aadhaarNumber && (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-            <h4 className="font-medium text-green-800 mb-3 flex items-center">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
+            <h4 className="font-medium text-black mb-3 flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
               Verified Information
             </h4>
@@ -135,7 +135,7 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
               </div>
               <div>
                 <span className="text-gray-600">Address Verified:</span>
-                <span className="ml-2 text-green-600">✓ Matches</span>
+                <span className="ml-2 text-black">✓ Matches</span>
               </div>
             </div>
             <div className="mt-2">
@@ -154,11 +154,11 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
               <div key={docType.id} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center space-x-3">
-                    <div className={`p-2 rounded-lg ${status?.verified ? 'bg-green-100' : 'bg-gray-100'}`}>
-                      <docType.icon className={`h-5 w-5 ${status?.verified ? 'text-green-600' : 'text-gray-600'}`} />
+                    <div className={`p-2 rounded-lg ${status?.verified ? 'bg-gray-100' : 'bg-gray-100'}`}>
+                      <docType.icon className={`h-5 w-5 ${status?.verified ? 'text-black' : 'text-gray-600'}`} />
                     </div>
                     <div>
-                      <h4 className="font-medium text-gray-800">
+                      <h4 className="font-medium text-black">
                         {docType.name}
                         {docType.required && <span className="text-red-500 ml-1">*</span>}
                       </h4>
@@ -167,7 +167,7 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
                   </div>
                   
                   {status?.verified && (
-                    <CheckCircle className="h-6 w-6 text-green-500" />
+                    <CheckCircle className="h-6 w-6 text-black" />
                   )}
                 </div>
 
@@ -182,7 +182,7 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
                     </div>
                   </div>
                 ) : !status?.uploaded ? (
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-green-400 transition-colors">
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-black transition-colors">
                     <Upload className="h-8 w-8 text-gray-400 mx-auto mb-2" />
                     <p className="text-sm text-gray-600 mb-3">
                       Click to upload or drag and drop
@@ -199,19 +199,19 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
                     />
                     <label
                       htmlFor={`upload-${docType.id}`}
-                      className="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 cursor-pointer transition-colors"
+                      className="inline-flex items-center px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 cursor-pointer transition-colors"
                     >
                       Choose File
                     </label>
                   </div>
                 ) : (
-                  <div className="bg-green-50 p-4 rounded-lg">
+                  <div className="bg-gray-50 p-4 rounded-lg">
                     <div className="flex items-center space-x-2">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <span className="font-medium text-green-800">Document Verified</span>
+                      <CheckCircle className="h-5 w-5 text-black" />
+                      <span className="font-medium text-black">Document Verified</span>
                     </div>
                     {status.extractedData && (
-                      <div className="mt-2 text-sm text-green-700">
+                      <div className="mt-2 text-sm text-gray-700">
                         <p>✓ Information extracted and verified successfully</p>
                       </div>
                     )}
@@ -223,12 +223,12 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
         </div>
 
         {allDocumentsVerified && (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6">
             <div className="flex items-center space-x-3">
-              <CheckCircle className="h-6 w-6 text-green-600" />
+              <CheckCircle className="h-6 w-6 text-black" />
               <div>
-                <h4 className="font-medium text-green-800">All Documents Verified!</h4>
-                <p className="text-sm text-green-700">You can now proceed to select your preferred lender.</p>
+                <h4 className="font-medium text-black">All Documents Verified!</h4>
+                <p className="text-sm text-gray-700">You can now proceed to select your preferred lender.</p>
               </div>
             </div>
           </div>
@@ -237,7 +237,7 @@ export const DocumentVerification: React.FC<DocumentVerificationProps> = ({
         <button
           onClick={onNext}
           disabled={!allDocumentsVerified}
-          className="w-full mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full mt-6 bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Continue to Lender Selection
         </button>

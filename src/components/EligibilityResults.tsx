@@ -89,7 +89,7 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
     <div className="max-w-4xl mx-auto">
       <button
         onClick={onBack}
-        className="flex items-center text-green-600 hover:text-green-700 mb-6 transition-colors"
+        className="flex items-center text-black hover:text-gray-700 mb-6 transition-colors"
       >
         <ChevronLeft className="h-5 w-5 mr-1" />
         Back
@@ -97,15 +97,15 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
 
       <div className="mb-8">
         {/* Credit Score Card */}
-        <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl p-6 mb-6">
+        <div className="bg-black text-white rounded-xl p-6 mb-6">
           <div className="flex items-center justify-between">
             <div>
               <h3 className="text-lg font-semibold mb-2">Your Credit Score</h3>
               <div className="flex items-baseline space-x-2">
                 <span className="text-3xl font-bold">{creditScore}</span>
-                <span className="text-green-200">/ 900</span>
+                <span className="text-gray-300">/ 900</span>
               </div>
-              <p className="text-green-100 text-sm mt-1">Excellent Credit Profile</p>
+              <p className="text-gray-200 text-sm mt-1">Excellent Credit Profile</p>
             </div>
             <div className="bg-white bg-opacity-20 p-3 rounded-lg">
               <TrendingUp className="h-8 w-8" />
@@ -116,24 +116,24 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
         {/* Eligibility Summary */}
         <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
           <div className="text-center mb-6">
-            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="h-8 w-8 text-green-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="h-8 w-8 text-black" />
             </div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Great News!</h2>
+            <h2 className="text-2xl font-bold text-black mb-2">Great News!</h2>
             <p className="text-gray-600">You're eligible for loans from {lenders.length} lenders</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 text-center">
             <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="text-2xl font-bold text-blue-600">₹{Math.max(...lenders.map(l => l.maxAmount)).toLocaleString()}</div>
+              <div className="text-2xl font-bold text-black">₹{Math.max(...lenders.map(l => l.maxAmount)).toLocaleString()}</div>
               <div className="text-sm text-gray-600">Max Loan Amount</div>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg">
-              <div className="text-2xl font-bold text-green-600">{Math.min(...lenders.map(l => l.interestRate))}%</div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="text-2xl font-bold text-black">{Math.min(...lenders.map(l => l.interestRate))}%</div>
               <div className="text-sm text-gray-600">Best Interest Rate</div>
             </div>
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <div className="text-2xl font-bold text-purple-600">₹{Math.min(...lenders.map(l => l.emi)).toLocaleString()}</div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="text-2xl font-bold text-black">₹{Math.min(...lenders.map(l => l.emi)).toLocaleString()}</div>
               <div className="text-sm text-gray-600">Lowest EMI</div>
             </div>
           </div>
@@ -141,14 +141,14 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
 
         {/* Lender Cards */}
         <div className="space-y-4">
-          <h3 className="text-xl font-bold text-gray-800 mb-4">Available Loan Offers</h3>
+          <h3 className="text-xl font-bold text-black mb-4">Available Loan Offers</h3>
           {lenders.map((lender) => (
             <div key={lender.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="text-3xl">{lender.logo}</div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-800">{lender.name}</h4>
+                    <h4 className="text-lg font-bold text-black">{lender.name}</h4>
                     <div className="flex items-center space-x-1">
                       <div className="flex text-yellow-400">
                         {[...Array(5)].map((_, i) => (
@@ -159,26 +159,26 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
                     </div>
                   </div>
                 </div>
-                <div className="bg-green-100 px-3 py-1 rounded-full">
-                  <span className="text-sm font-medium text-green-700">✓ Approved</span>
+                <div className="bg-gray-100 px-3 py-1 rounded-full">
+                  <span className="text-sm font-medium text-black">✓ Approved</span>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-4 gap-4 mb-4">
                 <div className="text-center">
-                  <div className="text-xl font-bold text-gray-800">₹{lender.maxAmount.toLocaleString()}</div>
+                  <div className="text-xl font-bold text-black">₹{lender.maxAmount.toLocaleString()}</div>
                   <div className="text-sm text-gray-600">Max Amount</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl font-bold text-blue-600">{lender.interestRate}%</div>
+                  <div className="text-xl font-bold text-black">{lender.interestRate}%</div>
                   <div className="text-sm text-gray-600">Interest Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl font-bold text-purple-600">₹{lender.emi.toLocaleString()}</div>
+                  <div className="text-xl font-bold text-black">₹{lender.emi.toLocaleString()}</div>
                   <div className="text-sm text-gray-600">Monthly EMI</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xl font-bold text-green-600">{lender.tenure} months</div>
+                  <div className="text-xl font-bold text-black">{lender.tenure} months</div>
                   <div className="text-sm text-gray-600">Max Tenure</div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export const EligibilityResults: React.FC<EligibilityResultsProps> = ({
 
         <button
           onClick={onNext}
-          className="w-full mt-6 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300"
+          className="w-full mt-6 bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
         >
           Continue to Document Verification
         </button>

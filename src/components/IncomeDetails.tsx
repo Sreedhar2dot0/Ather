@@ -74,7 +74,7 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
     <div className="max-w-2xl mx-auto">
       <button
         onClick={onBack}
-        className="flex items-center text-green-600 hover:text-green-700 mb-6 transition-colors"
+        className="flex items-center text-black hover:text-gray-700 mb-6 transition-colors"
       >
         <ChevronLeft className="h-5 w-5 mr-1" />
         Back
@@ -82,10 +82,10 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
 
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="text-center mb-8">
-          <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <DollarSign className="h-8 w-8 text-purple-600" />
+          <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <DollarSign className="h-8 w-8 text-black" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Income Details</h2>
+          <h2 className="text-2xl font-bold text-black mb-2">Income Details</h2>
           <p className="text-gray-600">Help us assess your loan eligibility</p>
         </div>
 
@@ -99,7 +99,7 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
               <select
                 value={formData.monthlyIncome}
                 onChange={(e) => handleInputChange('monthlyIncome', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all"
               >
                 <option value="">Select Monthly Income</option>
                 <option value="15000-25000">₹15,000 - ₹25,000</option>
@@ -125,7 +125,7 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
                 type="text"
                 value={formData.workPincode}
                 onChange={(e) => handleInputChange('workPincode', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all"
                 placeholder="560001"
                 maxLength={6}
               />
@@ -144,7 +144,7 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
               <select
                 value={formData.existingEmi}
                 onChange={(e) => handleInputChange('existingEmi', e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all"
               >
                 <option value="">Select Existing EMI</option>
                 <option value="0">No Existing EMI</option>
@@ -162,11 +162,11 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
 
           <div className="bg-blue-50 p-4 rounded-lg">
             <div className="flex items-start space-x-3">
-              <div className="bg-blue-100 p-2 rounded-lg">
-                <Calculator className="h-5 w-5 text-blue-600" />
+              <div className="bg-gray-100 p-2 rounded-lg">
+                <Calculator className="h-5 w-5 text-black" />
               </div>
               <div>
-                <h4 className="font-medium text-gray-800 mb-1">What happens next?</h4>
+                <h4 className="font-medium text-black mb-1">What happens next?</h4>
                 <p className="text-sm text-gray-600">
                   We'll check your credit score and calculate your loan eligibility with multiple lenders to get you the best offers.
                 </p>
@@ -177,7 +177,7 @@ export const IncomeDetails: React.FC<IncomeDetailsProps> = ({
           <button
             onClick={handleNext}
             disabled={!isFormValid()}
-            className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-black text-white py-3 px-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Check Eligibility
           </button>

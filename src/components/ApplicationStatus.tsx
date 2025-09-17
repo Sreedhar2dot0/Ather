@@ -53,15 +53,15 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
       {/* Success Header */}
       <div className="bg-white rounded-xl shadow-lg p-8 mb-6">
         <div className="text-center">
-          <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="h-10 w-10 text-green-600" />
+          <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="h-10 w-10 text-black" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Congratulations!</h1>
+          <h1 className="text-3xl font-bold text-black mb-2">Congratulations!</h1>
           <p className="text-lg text-gray-600 mb-4">
             Your loan application has been approved by {applicationData.selectedLender?.name}
           </p>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 inline-block">
-            <p className="text-sm text-green-700">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 inline-block">
+            <p className="text-sm text-black">
               Application ID: <span className="font-bold">{applicationData.applicationId}</span>
             </p>
           </div>
@@ -70,7 +70,7 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
 
       {/* Loan Details Card */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-4">Loan Details</h3>
+        <h3 className="text-xl font-bold text-black mb-4">Loan Details</h3>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="space-y-3">
             <div className="flex justify-between">
@@ -79,7 +79,7 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Approved Amount:</span>
-              <span className="font-semibold text-green-600">₹{applicationData.selectedLender?.finalAmount?.toLocaleString()}</span>
+              <span className="font-semibold text-black">₹{applicationData.selectedLender?.finalAmount?.toLocaleString()}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Interest Rate:</span>
@@ -94,7 +94,7 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
           <div className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Monthly EMI:</span>
-              <span className="font-semibold text-blue-600">₹{applicationData.selectedLender?.finalEmi?.toLocaleString()}</span>
+              <span className="font-semibold text-black">₹{applicationData.selectedLender?.finalEmi?.toLocaleString()}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Processing Fee:</span>
@@ -118,36 +118,36 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
 
       {/* Sanction Letter Section */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-4">Sanction Letter</h3>
+        <h3 className="text-xl font-bold text-black mb-4">Sanction Letter</h3>
         
         {!sanctionGenerated ? (
           <div className="text-center py-8">
-            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Download className="h-8 w-8 text-blue-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Download className="h-8 w-8 text-black" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">Generate Sanction Letter</h4>
+            <h4 className="text-lg font-semibold text-black mb-2">Generate Sanction Letter</h4>
             <p className="text-gray-600 mb-6">
               Your loan has been approved. Generate and download your official sanction letter.
             </p>
             <button
               onClick={handleGenerateSanction}
-              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300"
+              className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300"
             >
               Generate Sanction Letter
             </button>
           </div>
         ) : (
           <div className="text-center py-6">
-            <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CheckCircle className="h-8 w-8 text-green-600" />
+            <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="h-8 w-8 text-black" />
             </div>
-            <h4 className="text-lg font-semibold text-gray-800 mb-2">Sanction Letter Ready!</h4>
+            <h4 className="text-lg font-semibold text-black mb-2">Sanction Letter Ready!</h4>
             <p className="text-gray-600 mb-6">
               Your official sanction letter has been generated and is ready for download.
             </p>
             <button
               onClick={handleDownloadSanction}
-              className="bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 flex items-center space-x-2 mx-auto"
+              className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 flex items-center space-x-2 mx-auto"
             >
               <Download className="h-5 w-5" />
               <span>Download Sanction Letter</span>
@@ -158,28 +158,28 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
 
       {/* Disbursement Status */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-6">Disbursement Status</h3>
+        <h3 className="text-xl font-bold text-black mb-6">Disbursement Status</h3>
         
         <div className="space-y-4">
           {disbursementSteps.map((step, index) => (
             <div key={index} className="flex items-start space-x-4">
               <div className={`w-8 h-8 rounded-full flex items-center justify-center mt-1 ${
-                step.status === 'completed' ? 'bg-green-100' :
-                step.status === 'current' ? 'bg-blue-100' :
+                step.status === 'completed' ? 'bg-gray-100' :
+                step.status === 'current' ? 'bg-gray-100' :
                 'bg-gray-100'
               }`}>
                 {step.status === 'completed' ? (
-                  <CheckCircle className="h-5 w-5 text-green-600" />
+                  <CheckCircle className="h-5 w-5 text-black" />
                 ) : step.status === 'current' ? (
-                  <Clock className="h-5 w-5 text-blue-600" />
+                  <Clock className="h-5 w-5 text-black" />
                 ) : (
                   <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
                 )}
               </div>
               <div className="flex-1">
                 <h4 className={`font-semibold ${
-                  step.status === 'completed' ? 'text-green-800' :
-                  step.status === 'current' ? 'text-blue-800' :
+                  step.status === 'completed' ? 'text-black' :
+                  step.status === 'current' ? 'text-black' :
                   'text-gray-600'
                 }`}>
                   {step.title}
@@ -208,21 +208,21 @@ export const ApplicationStatus: React.FC<ApplicationStatusProps> = ({
 
       {/* Contact Support */}
       <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-        <h3 className="text-xl font-bold text-gray-800 mb-4">Need Help?</h3>
+        <h3 className="text-xl font-bold text-black mb-4">Need Help?</h3>
         <div className="grid md:grid-cols-3 gap-4">
           <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <Phone className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-            <h4 className="font-semibold text-gray-800 mb-1">Call Support</h4>
+            <Phone className="h-8 w-8 text-black mx-auto mb-2" />
+            <h4 className="font-semibold text-black mb-1">Call Support</h4>
             <p className="text-sm text-gray-600">1800-XXX-XXXX</p>
           </div>
           <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <Mail className="h-8 w-8 text-green-600 mx-auto mb-2" />
-            <h4 className="font-semibold text-gray-800 mb-1">Email Us</h4>
+            <Mail className="h-8 w-8 text-black mx-auto mb-2" />
+            <h4 className="font-semibold text-black mb-1">Email Us</h4>
             <p className="text-sm text-gray-600">loans@ather.energy</p>
           </div>
           <div className="text-center p-4 bg-gray-50 rounded-lg">
-            <Home className="h-8 w-8 text-purple-600 mx-auto mb-2" />
-            <h4 className="font-semibold text-gray-800 mb-1">Visit Store</h4>
+            <Home className="h-8 w-8 text-black mx-auto mb-2" />
+            <h4 className="font-semibold text-black mb-1">Visit Store</h4>
             <p className="text-sm text-gray-600">Find nearest Ather Space</p>
           </div>
         </div>
